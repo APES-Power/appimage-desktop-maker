@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <!-- GtkApplication adds <resource-base-path>/icons to the icon theme automatically -->
+  <gresource prefix="/io/github/APES_Power/AppImageDesktopMaker/icons/scalable/apps">
+    <file alias="io.github.APES_Power.AppImageDesktopMaker.svg">logos/io.github.APES_Power.AppImageDesktopMaker.svg</file>
+  </gresource>
+</gresources>

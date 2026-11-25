@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.APES_Power.AppImageDesktopMaker</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-only</project_license>
+
+  <name>AppImage Desktop Maker</name>
+  <summary>Create desktop entries for your AppImages</summary>
+  <summary xml:lang="es">Crea entradas .desktop para tus AppImages</summary>
+
+  <developer id="io.github.apes_power">
+    <name>APES Power</name>
+  </developer>
+
+  <description>
+    <p>
+      AppImage Desktop Maker generates .desktop launchers for AppImages so they
+      show up in your application menu, with the matching icon from a folder of
+      your choice.
+    </p>
+    <ul>
+      <li>Create an entry for a single AppImage, customising name, comment, categories and StartupWMClass</li>
+      <li>Create entries for every AppImage in a folder at once</li>
+      <li>Icons are matched by file name (Foo.AppImage → Foo.png or Foo.svg)</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.APES_Power.AppImageDesktopMaker.desktop</launchable>
+  <url type="homepage">https://github.com/APES-Power/appimage-desktop-maker</url>
+  <url type="bugtracker">https://github.com/APES-Power/appimage-desktop-maker/issues</url>
+  <url type="vcs-browser">https://github.com/APES-Power/appimage-desktop-maker</url>
+
+  <content_rating type="oars-1.1"/>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+
+  <releases>
+    <release version="1.0.0" date="2026-11-25"/>
+  </releases>
+</component>

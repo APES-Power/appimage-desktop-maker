@@ -1,0 +1,29 @@
+app-id: io.github.APES_Power.AppImageDesktopMaker
+runtime: org.gnome.Platform
+runtime-version: '51'
+sdk: org.gnome.Sdk
+command: appimage-desktop-maker
+
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  # The generated .desktop files contain absolute paths to the AppImages and
+  # icons, so the app needs real (non-portal) paths wherever they live, and
+  # write access to ~/.local/share/applications.
+  - --filesystem=host
+
+modules:
+  - name: appimage-desktop-maker
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+    sources:
+      - type: dir
+        path: ../..
+        skip:
+          - build
+          - build-appimage
+          - build-flatpak
+          - .flatpak-builder

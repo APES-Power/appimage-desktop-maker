@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#62a0ea"/>
+      <stop offset="1" stop-color="#1c71d8"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#deddda"/>
+    </linearGradient>
+    <linearGradient id="cubeTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbe6f"/>
+      <stop offset="1" stop-color="#ffa348"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base (Adwaita-style rounded tile with bottom depth) -->
+  <rect x="8" y="14" width="112" height="106" rx="22" fill="#1a5fb4"/>
+  <rect x="8" y="8" width="112" height="106" rx="22" fill="url(#bg)"/>
+
+  <!-- .desktop file sheet -->
+  <path d="M44 22 h34 l16 16 v52 a6 6 0 0 1 -6 6 h-44 a6 6 0 0 1 -6 -6 v-62 a6 6 0 0 1 6 -6 z"
+        fill="url(#paper)"/>
+  <path d="M78 22 v12 a4 4 0 0 0 4 4 h12 z" fill="#c0bfbc"/>
+  <!-- "[Desktop Entry]" lines -->
+  <rect x="46" y="36" width="24" height="5" rx="2.5" fill="#1c71d8"/>
+  <rect x="46" y="48" width="38" height="4" rx="2" fill="#9a9996"/>
+  <rect x="46" y="57" width="30" height="4" rx="2" fill="#9a9996"/>
+  <rect x="46" y="66" width="34" height="4" rx="2" fill="#9a9996"/>
+
+  <!-- AppImage package cube -->
+  <g transform="translate(24 62)">
+    <path d="M22 0 l22 11 v24 l-22 11 l-22 -11 v-24 z" fill="#c64600"/>
+    <path d="M22 0 l22 11 l-22 11 l-22 -11 z" fill="url(#cubeTop)"/>
+    <path d="M0 11 l22 11 v24 l-22 -11 z" fill="#e66100"/>
+    <path d="M22 22 l22 -11 v24 l-22 11 z" fill="#c64600"/>
+    <path d="M11 5.5 l22 11 v6" fill="none" stroke="#fff" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- "add" badge -->
+  <circle cx="94" cy="92" r="16" fill="#2ec27e" stroke="#ffffff" stroke-width="4"/>
+  <path d="M94 84 v16 M86 92 h16" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=AppImage Desktop Maker
+Comment=Create .desktop entries from AppImages
+Comment[es]=Crea entradas .desktop a partir de AppImages
+Exec=appimage-desktop-maker
+Icon=io.github.APES_Power.AppImageDesktopMaker
+Terminal=false
+Categories=GTK;GNOME;Utility;
+Keywords=AppImage;desktop;launcher;menu;
+StartupNotify=true
