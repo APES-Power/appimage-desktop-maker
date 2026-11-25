@@ -1,20 +1,19 @@
-# appimage-desktop-maker
+# AppImage Desktop Maker
 
 <img src="res/logos/io.github.APES_Power.AppImageDesktopMaker-128.png" align="right" alt="logo">
 
-Simple GTK4 + libadwaita program to create `.desktop` entries for AppImages.
+Programa sencillo desarrollado con GTK4 y libadwaita para crear archivos `.desktop` para aplicaciones AppImage.
 
-- Choose the AppImages folder, the icons folder and the destination folder for the `.desktop` files
-  (default `~/.local/share/applications`).
-- **Un AppImage** tab: pick a single AppImage and customise name, comment, categories and terminal.
-- **Toda la carpeta** tab: generate entries for every AppImage in the folder at once.
-- Icons are matched by file name: `Foo-1.2.AppImage` → `Foo-1.2.svg` / `.png` / `.xpm` / `.jpg` / `.ico`.
-  If no icon is found, a generic one is used.
-- Directories are remembered in `~/.config/appimage-desktop-maker/settings.ini`.
+- Selecciona la carpeta de AppImages, la carpeta de iconos y la carpeta de destino de los archivos `.desktop` (por defecto: `~/.local/share/applications`).
+- **Una sola AppImage:** selecciona un único archivo AppImage y personaliza su nombre, descripción, categorías y ejecución en terminal.
+- **Toda la carpeta:** genera entradas automáticamente para todos los archivos AppImage de una carpeta.
+- Los iconos se buscan utilizando el nombre del archivo: `Foo-1.2.AppImage` → `Foo-1.2.svg` / `.png` / `.xpm` / `.jpg` / `.ico`.
+  Si no se encuentra ningún icono, se utiliza uno genérico.
+- Las carpetas seleccionadas se guardan en `~/.config/appimage-desktop-maker/settings.ini`.
 
-## Build
+## Compilación
 
-Dependencies: CMake ≥ 3.16, a C++17 compiler, GTK ≥ 4.12, libadwaita ≥ 1.7.
+Dependencias: CMake ≥ 3.16, un compilador compatible con C++17, GTK ≥ 4.12 y libadwaita ≥ 1.7.
 
 ```sh
 # Debian/Ubuntu
@@ -24,25 +23,25 @@ cmake -S . -B build
 cmake --build build
 ./build/appimage-desktop-maker
 
-# optional
+# Opcional
 sudo cmake --install build
 ```
 
 ## Flatpak
 
-Requires `org.gnome.Sdk//51` and `org.gnome.Platform//51` from Flathub.
+Requiere `org.gnome.Sdk//51` y `org.gnome.Platform//51` de Flathub.
 
 ```sh
 packaging/build-flatpak.sh            # → AppImage-Desktop-Maker-<version>.flatpak
-packaging/build-flatpak.sh --install  # build and install for the current user
+packaging/build-flatpak.sh --install  # Compilar e instalar para el usuario actual
 ```
 
-The script uses `flatpak-builder` with
+El script utiliza `flatpak-builder` con el archivo
 [packaging/flatpak/io.github.APES_Power.AppImageDesktopMaker.yml](packaging/flatpak/io.github.APES_Power.AppImageDesktopMaker.yml)
-when available, and falls back to plain `flatpak build` otherwise. The app runs with
-`--filesystem=host`, because the generated `.desktop` files must contain real paths to
-the AppImages and icons.
+si está disponible. En caso contrario, utiliza como alternativa el comando `flatpak build` directamente.
 
-## License
+La aplicación se ejecuta con el permiso `--filesystem=host`, ya que los archivos `.desktop` generados deben contener las rutas reales de las aplicaciones AppImage y de sus iconos.
 
-GPL-2.0 — see [LICENSE](LICENSE).
+## Licencia
+
+GPL-2.0 — consulta el archivo [LICENSE](LICENSE).
